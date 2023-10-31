@@ -22,10 +22,11 @@ export function aufgabe01(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    let currentElement = input[i]
    
     //Falls es einen kleienen Buchstaben beinhaltet, soll dieser gross an die Liste angehängt werden.
-
+currentElement=currentElement.toUpperCase ()
+result.push (currentElement)
   }
   return result.join("")
 }
