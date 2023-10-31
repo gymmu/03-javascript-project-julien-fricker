@@ -23,7 +23,9 @@ export function aufgabe01(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+   
+    //Falls es einen kleienen Buchstaben beinhaltet, soll dieser gross an die Liste angehängt werden.
+
   }
   return result.join("")
 }
