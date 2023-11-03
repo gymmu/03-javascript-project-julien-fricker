@@ -57,7 +57,22 @@ export function aufgabe04 (args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+
+    if (currentElement === "-"){
+//sortiert alle - aus 
+    } else if (currentElement === "+") {}
+    //sortiert alle + aus
+    else {
+    result.push(currentElement)
   }
-  return result.join("")
+}
+
+const clearedString = result.join("")
+//sagt, dass die Buchstabenelemente zusammengehören
+const tmp = clearedString.split(" ")
+//sagt, das die clearedString (gesäuberte Liste) durch Leerzeichen getrennt wird
+print(tmp)
+
+
+return tmp.length
 }
