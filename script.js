@@ -58,9 +58,9 @@ export function aufgabe04 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    if (currentElement === "-"){
+    if (currentElement === "-"){}
 //sortiert alle - aus 
-    } else if (currentElement === "+") {}
+     else if (currentElement === "+") {}
     //sortiert alle + aus
     else {
     result.push(currentElement)
@@ -75,4 +75,36 @@ print(tmp)
 
 
 return tmp.length
+}
+
+export function aufgabe05 (args) {
+  const input = args
+  const result = []
+
+let countE = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === " "){
+    
+    }  else if (currentElement === ".") {
+
+    } else if (currentElement.toUpperCase() === currentElement){
+      return true
+    }
+
+  
+  }
+  return false
+}
+
+export function aufgabe06 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
 }
