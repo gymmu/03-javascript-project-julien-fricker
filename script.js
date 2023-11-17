@@ -87,16 +87,18 @@ let countE = 0
     const currentElement = input[i]
 
     if (currentElement === " "){
-    
+    //ignoriert alle Leerzeichen
     }  else if (currentElement === ".") {
-
+    //ignoriert alle Punkte
     } else if (currentElement.toUpperCase() === currentElement){
+    //wenn Grossbuchstaben erkannt werden, soll true herausgegeben werden
       return true
     }
 
   
   }
   return false
+    //Wenn das eingegebene die obere funktion nicht erfüllt, dann soll "false" zurückgegeben werden
 }
 
 export function aufgabe06 (args) {
