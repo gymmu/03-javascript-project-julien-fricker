@@ -157,3 +157,57 @@ let len = 0
   }
   return false
 }
+
+export function aufgabe10 (args) {
+  const input = args
+  const result = []
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  
+}
+  return result.join("")
+}
+
+
+
+
+
+export function aufgabe11 (args) {
+  const input = args
+  const result = []
+
+if(input.length > 1){
+  return null
+}
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+return currentElement.charCodeAt(0)
+
+  }
+  return null
+}
+
+export function aufgabe12 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement === "e")
+    return i
+  }
+  return -1
+}
+
+export function aufgabe13 (args) {
+  const input = args
+  const result = []
+  for (let i = input.length - 1; i >=0; i--) {
+    const currentElement = input[i]
+    if(currentElement === "e"){
+    return i
+    }
+  }
+  return -1
+}
