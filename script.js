@@ -164,21 +164,19 @@ export function aufgabe10 (args) {
 if (input.length !== 7) return false
 if (input[0]  !== "#") return false
   
-for (let i = 0; i < input.length; i++) {
+for (let i = 1; i < input.length; i++) {
   const currentElement = input[i]
-  const ascii = currentElement.charCodeAt (0)
+  const ascii = currentElement.charCodeAt(0)
 
   if (48 <= ascii && ascii <= 57) {
-//ascii code aller Grossbuchstaben von A
+//ascii code aller Zahlen von 0-9
   } else if (65 <= ascii && ascii <= 70) {
-
+//ascii code aller Grossbuchstaben von A-F
   }else if (97 <= ascii && ascii <= 102) {
-
+//ascii code aller kleinbuchstaben von a-f
   }
 else {return false
-
 }
-
 }
   return true
 }
