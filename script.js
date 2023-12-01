@@ -160,12 +160,27 @@ let len = 0
 
 export function aufgabe10 (args) {
   const input = args
-  const result = []
+
+if (input.length !== 7) return false
+if (input[0]  !== "#") return false
+  
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
-  
+  const ascii = currentElement.charCodeAt (0)
+
+  if (48 <= ascii && ascii <= 57) {
+//ascii code aller Grossbuchstaben von A
+  } else if (65 <= ascii && ascii <= 70) {
+
+  }else if (97 <= ascii && ascii <= 102) {
+
+  }
+else {return false
+
 }
-  return result.join("")
+
+}
+  return true
 }
 
 
