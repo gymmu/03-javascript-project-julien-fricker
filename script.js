@@ -117,8 +117,14 @@ export function aufgabe07 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
-  }
-  return result.join("")
+    if(input[0].toLowerCase() ==="u") {
+      if ( input[i+1] ==="n")
+      if (input[i+2] ==="d")
+      return true
+    }//wenn u am satzanfang ist und n und d folgen, soll true herausgegeben werden.
+  } 
+return false
+//ansonsten wird false herausgegeben.
 }
 
 
