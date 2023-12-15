@@ -363,7 +363,8 @@ export function aufgabe20 (args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+    if(currentElement == "." && input[i+1] !== " ") return false
+    else if(currentElement == "." && input[i+1] == " ") return true
   }
   return result.join("")
 }
