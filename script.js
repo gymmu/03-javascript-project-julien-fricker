@@ -316,6 +316,16 @@ export function aufgabe16 (args) {
   }
 }
 
+export function aufgabe (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
+
 
 
 
