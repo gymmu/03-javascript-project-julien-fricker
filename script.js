@@ -252,12 +252,16 @@ export function aufgabe13 (args) {
 
 export function aufgabe14 (args) {
   const input = args
-  const result = []
+  let count = 0
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+    if (currentElement === "e") {
+      count++
+    }
   }
-  return result.join("")
+ if (count === input.length) return (2)
+ else return (-1)
 }
 
 
