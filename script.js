@@ -55,26 +55,46 @@ countE++
 export function aufgabe04 (args) {
   const input = args
   const result = []
+
+  const cleanText = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    if (currentElement === "-"){}
-//sortiert alle - aus 
-     else if (currentElement === "+") {}
-    //sortiert alle + aus
-    else {
-    result.push(currentElement)
+    const ascii = currentElement.charCodeAt(0)
+  if(32 === ascii) {
+    cleanText.push(currentElement)
+  }else if(65 <= ascii && ascii <= 90) {
+    cleanText.push(currentElement)
+  }else if(97 <= ascii && ascii <= 122) {
+    cleanText.push(currentElement)
   }
-}
+  }
+  
+  const tmp = cleanText.join("")
+  const tmpText = []
 
-const clearedString = result.join("")
-//sagt, dass die Buchstabenelemente zusammengehören
-const tmp = clearedString.split(" ")
-//sagt, das die clearedString (gesäuberte Liste) durch Leerzeichen getrennt wird
-print(tmp)
+  for (let i = 0; i < tmp.length; i++) {
+    const currentElement = tmp[i]
+    const nextElement = tmp [i + 1] 
+  if (currentElement === " " && nextElement === " ") {}
+  //ignoriert mehrere Leerzeichen hintereinander
 
+  else {
+    tmpText.push(currentElement)
+  }
+  }
 
-return tmp.length
+  const clean = tmpText.join("")
+
+  let words = 0
+  for (let i = 0; i < clean.length; i++) {
+    const currentElement = clean[i]
+    if (currentElement === " ") {
+      words++
+    }
+  }
+  return words + 1
+
 }
 
 export function aufgabe05 (args) {
