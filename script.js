@@ -315,14 +315,46 @@ export function aufgabe16 (args) {
     return result1.join("")
   }
 }
-
-export function aufgabe (args) {
+export function aufgabe18 (args) {
   const input = args
-  const result = []
+  const inputName = []
+  const inputAge = []
+  let readText = true
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
+    if (currentElement === " " && readText !== false) {
+      // Überprüft, ob das aktuelle Element ein Leerzeichen ist und ob wir noch Text lesen
+      readText = false
+      // Wenn ein Leerzeichen gefunden wird und wir noch Text lesen, wechseln wir zum Alter
+    } else {
+      if (readText === true) {
+        inputName.push(currentElement)
+      }
+      else if (readText === false) {
+        inputAge.push(currentElement)
+        // Wenn wir das Alter lesen, fügen wir das aktuelle Element zum inputAge Array hinzu
+      }
+    }
   }
+  if (inputName.join("") !== "" && inputAge.join("") !== "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") !== "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") !== "" && inputAge.join("") == "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") == "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+  // Überprüft die Werte der inputName- und inputAge-Arrays und gibt entsprechende Sätze zurück
+}
+
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement == "." && input[i+1] !== " ") return false
+    else if(currentElement == "." && input[i+1] == " ") return true
+  }
+
   return result.join("")
 }
 
